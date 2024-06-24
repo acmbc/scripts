@@ -27,10 +27,13 @@ local LuckTab = Library:CreateTab("Aimbot")
 
 LuckTab:CreateToggle("Auto LuckBoost #1", function(arg)
 if arg then
-	local luck1 = true
-while luck1 = true do
-
+	_G.luck1 = true -- put false to stop
+while _G.luck1 and task.wait() do
+game.Players.LocalPlayer.Character.HumanoidRootPart:PivotTo(workspace.Rarity.Luck.CFrame)
+wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart:PivotTo(workspace.Buttons.AddLuck.CFrame)
+end
 	else
-	print("Aimbot is now : Disabled")
+	_g.luck1 = false
 	end
 end)
