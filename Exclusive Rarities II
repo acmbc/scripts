@@ -22,13 +22,13 @@ _G.CustomTheme = {
 }
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/preztel/AzureLibrary/master/uilib.lua", true))()
 
-local LuckTab = Library:CreateTab("Aimbot") 
+local LuckTab = Library:CreateTab("Luck Boost") 
 
 
 LuckTab:CreateToggle("Auto LuckBoost #1", function(arg)
 if arg then
 	_G.luck1 = true -- put false to stop
-while _G.luck1 and task.wait() do
+while _G.luck1 == true and task.wait() do
 game.Players.LocalPlayer.Character.HumanoidRootPart:PivotTo(workspace.Rarity.Luck.CFrame)
 wait()
 game.Players.LocalPlayer.Character.HumanoidRootPart:PivotTo(workspace.Buttons.AddLuck.CFrame)
