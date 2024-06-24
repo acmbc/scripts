@@ -31,7 +31,7 @@ if arg then
 	_G.luck1 = true -- put false to stop
 while _G.luck1 == true and task.wait() do
 game.Players.LocalPlayer.Character.HumanoidRootPart:PivotTo(workspace.Rarity.Luck.CFrame)
-wait(0.05)
+wait(0.25)
 game.Players.LocalPlayer.Character.HumanoidRootPart:PivotTo(workspace.Buttons.AddLuck.CFrame)
 end
 	else
@@ -46,7 +46,7 @@ if arg then
 	_G.rune1 = true -- put false to stop
 while _G.rune1 == true and task.wait() do
 game.Players.LocalPlayer.Character.HumanoidRootPart:PivotTo(workspace.Rarity.Luck.CFrame)
-wait(0.05)
+wait(0.25)
 game.Players.LocalPlayer.Character.HumanoidRootPart:PivotTo(workspace.Buttons.AddLuck.CFrame)
 wait(0.9)
 game.Players.LocalPlayer.Character.HumanoidRootPart:PivotTo(workspace.Runes.Starter.CFrame)
