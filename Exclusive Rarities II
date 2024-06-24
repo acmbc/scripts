@@ -34,6 +34,6 @@ wait()
 game.Players.LocalPlayer.Character.HumanoidRootPart:PivotTo(workspace.Buttons.AddLuck.CFrame)
 end
 	else
-	_g.luck1 = false
+	_G.luck1 = false
 	end
 end)
