@@ -22,10 +22,11 @@ _G.CustomTheme = {
 }
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/preztel/AzureLibrary/master/uilib.lua", true))()
 
-local LuckTab = Library:CreateTab("Luck Boost") 
+local LuckTab = Library:CreateTab("Luck") 
+local RuneTab = Library:CreateTab("Runes") 
 
 
-LuckTab:CreateToggle("Auto LuckBoost #1", function(arg)
+LuckTab:CreateToggle("Auto LuckBoost #1 + Auto Rarity", function(arg)
 if arg then
 	_G.luck1 = true -- put false to stop
 while _G.luck1 == true and task.wait() do
@@ -35,5 +36,22 @@ game.Players.LocalPlayer.Character.HumanoidRootPart:PivotTo(workspace.Buttons.Ad
 end
 	else
 	_G.luck1 = false
+	end
+end)
+
+
+
+RuneTab:CreateToggle("Auto Rune #1 + Auto Luck Boost + Auto Rarity", function(arg)
+if arg then
+	_G.rune1 = true -- put false to stop
+while _G.rune1 == true and task.wait() do
+game.Players.LocalPlayer.Character.HumanoidRootPart:PivotTo(workspace.Rarity.Luck.CFrame)
+wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart:PivotTo(workspace.Buttons.AddLuck.CFrame)
+wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart:PivotTo(workspace.Runes.Starter.CFrame)
+end
+	else
+	_G.rune1 = false
 	end
 end)
