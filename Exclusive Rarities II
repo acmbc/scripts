@@ -48,7 +48,7 @@ while _G.rune1 == true and task.wait() do
 game.Players.LocalPlayer.Character.HumanoidRootPart:PivotTo(workspace.Rarity.Luck.CFrame)
 wait(0.05)
 game.Players.LocalPlayer.Character.HumanoidRootPart:PivotTo(workspace.Buttons.AddLuck.CFrame)
-wait(0.05)
+wait(0.33)
 game.Players.LocalPlayer.Character.HumanoidRootPart:PivotTo(workspace.Runes.Starter.CFrame)
 end
 	else
