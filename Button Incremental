@@ -22,7 +22,6 @@ _G.CustomTheme = {
 }
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/preztel/AzureLibrary/master/uilib.lua", true))()
 
-local TitleTab = Library:CreateTab("Made By Aeas Hub")
 local LuckTab = Library:CreateTab("farm") 
 
 
