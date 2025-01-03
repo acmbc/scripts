@@ -50,18 +50,19 @@ end)
 
 
 
-pTab:CreateToggle("bucket", function(arg)
+pTab:CreateToggle("Put items into Wagon", function(arg)
 if arg then
-	_G.Mine = true -- put false to stop
-while _G.Mine == true and task.wait() do
+	_G.Wagon = true -- put false to stop
+while _G.Wagon == true and task.wait() do
 
-local playerPos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-game.Players.LocalPlayer.Character.HumanoidRootPart:PivotTo(workspace.Map.Items.Bucket.Hitbox.CFrame)				
-keypress(VK_SPACE)
-keyrelease(VK_SPACE)
-game.Players.LocalPlayer.Character.HumanoidRootPart:PivotTo(workspace.Map.Wagons.Tank.Hitbox.CFrame)	
-game.Players.LocalPlayer.Character.HumanoidRootPart:PivotTo(playerPos)				
-wait()
+local args = {
+    [1] = workspace:WaitForChild("Map"):WaitForChild("Wagons"):WaitForChild("Storage"),
+    [2] = "Drop"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ItemService"):WaitForChild("RE"):WaitForChild("wagon"):FireServer(unpack(args))
+
+print("q")
 
 end
 	else
