@@ -57,8 +57,8 @@ while _G.Mine == true and task.wait() do
 
 local playerPos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 game.Players.LocalPlayer.Character.HumanoidRootPart:PivotTo(workspace.Map.Items.Bucket.Hitbox.CFrame)				
-keypress(VK_SPACE:0x20): void
-keyrelease(VK_SPACE:0x20): void
+keypress(VK_SPACE)
+keyrelease(VK_SPACE)
 game.Players.LocalPlayer.Character.HumanoidRootPart:PivotTo(workspace.Map.Wagons.Tank.Hitbox.CFrame)	
 game.Players.LocalPlayer.Character.HumanoidRootPart:PivotTo(playerPos)				
 wait()
