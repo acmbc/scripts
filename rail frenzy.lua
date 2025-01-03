@@ -66,6 +66,6 @@ print("q")
 
 end
 	else
-	_G.Mine = false
+	_G.Wagon = false
 	end
 end)
