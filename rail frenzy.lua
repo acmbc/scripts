@@ -25,6 +25,21 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/prezt
 local TitleTab = Library:CreateTab("Made By bert")
 local qTab = Library:CreateTab("Bucket (you click this)") 
 local pTab = Library:CreateTab("p") 
+local dashTab = Library:CreateTab("Dash")
+
+dashTab:CreateToggle("Auto Dash (for quest)", function(arg)
+if arg then
+	_G.Dash = true -- put false to stop
+while _G.Dash == true and task.wait() do
+
+game:GetService("ReplicatedStorage"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RE"):WaitForChild("dash"):FireServer()
+wait()
+
+end
+	else
+	_G.Dash = false
+	end
+end)
 
 
 qTab:CreateToggle("Auto Refill Bucket", function(arg)
