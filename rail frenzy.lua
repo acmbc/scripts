@@ -46,3 +46,29 @@ end
 	_G.Bucket = false
 	end
 end)
+
+
+
+
+pTab:CreateToggle("Auto Mine WIP", function(arg)
+if arg then
+	_G.Mine = true -- put false to stop
+while _G.Mine == true and task.wait() do
+local x = 1
+local y = 1
+local args = {
+    [1] = Vector2.new(x, y)
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ItemService"):WaitForChild("RE"):WaitForChild("damage_item"):FireServer(unpack(args))
+game:GetService("ReplicatedStorage"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ItemService"):WaitForChild("RE"):WaitForChild("damage_item"):FireServer(unpack(args))
+game:GetService("ReplicatedStorage"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ItemService"):WaitForChild("RE"):WaitForChild("damage_item"):FireServer(unpack(args))
+x = math.random(1, 100)
+y = math.random(1, 100)
+
+wait()
+
+end
+	else
+	_G.Mine = false
+	end
+end)
