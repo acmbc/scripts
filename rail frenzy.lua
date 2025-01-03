@@ -50,21 +50,17 @@ end)
 
 
 
-pTab:CreateToggle("Auto Mine WIP", function(arg)
+pTab:CreateToggle("bucket", function(arg)
 if arg then
 	_G.Mine = true -- put false to stop
 while _G.Mine == true and task.wait() do
-local x = 1
-local y = 1
-local args = {
-    [1] = Vector2.new(x, y)
-}
-game:GetService("ReplicatedStorage"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ItemService"):WaitForChild("RE"):WaitForChild("damage_item"):FireServer(unpack(args))
-game:GetService("ReplicatedStorage"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ItemService"):WaitForChild("RE"):WaitForChild("damage_item"):FireServer(unpack(args))
-game:GetService("ReplicatedStorage"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ItemService"):WaitForChild("RE"):WaitForChild("damage_item"):FireServer(unpack(args))
-x = math.random(1, 100)
-y = math.random(1, 100)
 
+local playerPos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+game.Players.LocalPlayer.Character.HumanoidRootPart:PivotTo(workspace.Map.Items.Bucket.Hitbox.CFrame)				
+keypress(VK_SPACE:0x20): void
+keyrelease(VK_SPACE:0x20): void
+game.Players.LocalPlayer.Character.HumanoidRootPart:PivotTo(workspace.Map.Wagons.Tank.Hitbox.CFrame)	
+game.Players.LocalPlayer.Character.HumanoidRootPart:PivotTo(playerPos)				
 wait()
 
 end
